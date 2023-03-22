@@ -285,6 +285,7 @@ body {
 	margin-right:10px;
 	padding-left:18px;
 	color:var(--c333);
+	cursor:pointer;
 }
 .color_mode_wrap label:before {
 	content:'';
