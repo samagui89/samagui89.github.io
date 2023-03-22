@@ -132,7 +132,7 @@ window.onload = function() {
         request = new ActiveXObject("microsoft.XMLHTTP");
     }
 
-    request.open("GET","/career/include/project.xml");
+    request.open("GET","/include/project.xml");
     request.send();
 
     request.onreadystatechange = function() {
