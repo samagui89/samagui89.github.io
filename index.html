@@ -1,445 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<script src="/resources/js/include.js"></script>
-	<script>include.comHead();</script>
-	<script>include.comJs();</script>
-	<script>include.comStyle();</script>
-</head>
-<body>
-	<header id="header">
-		<h1><a href="/">PiCK ME</a></h1>
-		<div class="nav_wrap">
-			<button type="button" class="btn_nav">
-				<i class="sq01"></i>
-				<i class="sq02"></i>
-				<i class="sq03"></i>
-				<i class="sq04"></i>
-			</button>
-			<nav>
-				<button type="button" data-scroll="sec01">INTRO</button>
-				<button type="button" data-scroll="sec02">ABOUT</button>
-				<button type="button" data-scroll="sec03">WORK</button>
-				<button type="button" data-scroll="footer">CONTACT</button>
-			</nav>
-		</div>
-	</header>
-	<div id="container">
-		<div class="content">
-			<section id="sec01" class="sec01">
-				<div class="visual_wrap">
-					<div class="visual_bg">
-						
-						<div id="bgParticles" class="bgParticles">
-							
-						</div>
-					</div>
-					<div id="mainVideo"></div>
-					<!-- <div class="bg_svg_box">
-						<div class="particle particle_1"></div>
-						<div class="particle particle_2"></div>
-						<div class="particle particle_3"></div>
-						<div class="particle particle_4"></div>
-					</div> -->
-					<div class="name">JUNG KYUNG JIN</div>
-				</div>
-			</section>
-			<section id="sec02" class="sec02">
-				
-			</section>
-			<section id="sec03" class="sec03">
-				<div class="work_wrap">
-					<ul class="work_list">
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work101">
-								<div class="card_inner">
-									<div class="front work01">
-										<div class="inner">
-											<p class="owner">Asiana Airline</p>
-											<p class="title">Fly Asiana</p>
-											<label for="work101">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="ico_work_wrap">
-												<i class="ico_work ico01"></i>
-											</div>
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">아시아나항공 온라인 채널 개편</p>
-												<span class="date">2017.09 ~ 2018.09</span>
-											</div>
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">아시아나항공 비즈니스 업그레이드</p>
-												<span class="date">2018.09 ~ 2018.10</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work101">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JKJ Career</title>
+		<link rel="shortcut icon" href="/career/resources/images/common/favicon.png">
+		<!-- <link rel="stylesheet" href="/resources/css/common.css"> -->
+		<link rel="stylesheet" href="/career/resources/css/ui.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<h1 class="logo">Jung Kyung Jin</h1>
+				<p class="desc">UI Developer &amp; Publisher</p>
+				<nav>
+					<ul>
+						<li class="selected">
+							<span class="dot">&middot;</span>
+							<button type="button" onclick="ui.navClick.init(this, 'home');">Home</button>
 						</li>
 						<li>
-							<div class="card">
-								<input type="checkbox" id="work102">
-								<div class="card_inner">
-									<div class="front work02">
-										<div class="inner">
-											<p class="owner">Samsung Securities</p>
-											<p class="title">Samsung POP</p>
-											<label for="work102">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">삼성증권 UX개선 리뉴얼</p>
-												<span class="date">2016.06 ~ 2016.12</span>
-											</div>
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">삼성증권 해외펀드 정보시스템 내부사이트 개발</p>
-												<span class="date">2017.03 ~ 2017.04</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work102">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
+							<span class="dot">&middot;</span>
+							<button type="button" onclick="ui.navClick.init(this, 'info');">Info</button>
 						</li>
 						<li>
-							<div class="card">
-								<input type="checkbox" id="work103">
-								<div class="card_inner">
-									<div class="front work03">
-										<div class="inner">
-											<p class="owner">KBIZ 중소기업중앙회</p>
-											<p class="title">참 괜찮은 중소기업</p>
-											<label for="work103">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">참 괜찮은 중소기업 일자리플랫폼 신규 구축</p>
-												<span class="date">2020.06 ~ 2020.12</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work103">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
+							<span class="dot">&middot;</span>
+							<button type="button" onclick="ui.navClick.init(this, 'projects');">Projects</button>
 						</li>
 						<li>
-							<div class="card">
-								<input type="checkbox" id="work104">
-								<div class="card_inner">
-									<div class="front work04">
-										<div class="inner">
-											<p class="owner">KBIZ 중소기업중앙회</p>
-											<p class="title">노란우산공제</p>
-											<label for="work104">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">노란우산공제 홈페이지 리뉴얼</p>
-												<span class="date">2019.11 ~ 2020.03</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work104">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work105">
-								<div class="card_inner">
-									<div class="front work05">
-										<div class="inner">
-											<p class="owner">KBIZ 중소기업중앙회</p>
-											<p class="title">공제기금 홈페이지</p>
-											<label for="work105">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">공제기금 홈페이지 리뉴얼</p>
-												<span class="date">2019.11 ~ 2020.03</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work105">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work106">
-								<div class="card_inner">
-									<div class="front work06">
-										<div class="inner">
-											<p class="owner">에스원</p>
-											<p class="title">S1 홈페이지</p>
-											<label for="work106">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">S1홈페이지 리뉴얼 구축</p>
-												<span class="date">2021.02 ~ 2021.07</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work106">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work107">
-								<div class="card_inner">
-									<div class="front work07">
-										<div class="inner">
-											<p class="owner">한국전력</p>
-											<p class="title">한국중부발전</p>
-											<label for="work107">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">한국중부발전 외부홈페이지 통합개편</p>
-												<span class="date">2017.01 ~ 2017.03</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work107">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work108">
-								<div class="card_inner">
-									<div class="front work08">
-										<div class="inner">
-											<p class="owner">서울삼성병원</p>
-											<p class="title">서울삼성병원 암병원</p>
-											<label for="work108">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">삼성서울병원 암병원 UI개편</p>
-												<span class="date">2017.06 ~ 2017.08</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work108">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work109">
-								<div class="card_inner">
-									<div class="front work09">
-										<div class="inner">
-											<p class="owner">NH농협은행</p>
-											<p class="title">NH농협카드 홈페이지</p>
-											<label for="work109">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">NH농협카드 상시 개발 운영</p>
-												<span class="date">2018.10 ~ 2019.10</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work109">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work110">
-								<div class="card_inner">
-									<div class="front work10">
-										<div class="inner">
-											<p class="owner">NH농협은행</p>
-											<p class="title">NH멤버스</p>
-											<label for="work110">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">NH멤버스 신규 구축 및 운영지원</p>
-												<span class="date">2018.10 ~ 2019.10</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work110">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work111">
-								<div class="card_inner">
-									<div class="front work11">
-										<div class="inner">
-											<p class="owner">한국전력</p>
-											<p class="title">한국남동발전 U`Sol</p>
-											<label for="work111">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">한국남동발전 U`SOl 신재생에너지 구축</p>
-												<span class="date">2017.08 ~ 2017.09</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work111">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work112">
-								<div class="card_inner">
-									<div class="front work12">
-										<div class="inner">
-											<p class="owner">한국전력</p>
-											<p class="title">한국남동발전 REC시스템</p>
-											<label for="work112">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">한국남동발전 REC시스템 신규 구축</p>
-												<span class="date">2020.04 ~ 2020.05</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work112">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card">
-								<input type="checkbox" id="work113">
-								<div class="card_inner">
-									<div class="front work13">
-										<div class="inner">
-											<p class="owner">롯데백화점</p>
-											<p class="title">롯데백화점 APP, Mobile Web채널 운영</p>
-											<label for="work113">DETAIL<span><em>DETAIL</em></span></label>
-										</div>
-									</div>
-									<div class="back">
-										<div class="inner">
-											<div class="project_box">
-												<p class="owner"></p>
-												<p class="title">롯데백화점 APP, Mobile Web 채널 운영</p>
-												<span class="date">2021.08 ~ 2021.12</span>
-											</div>
-											<div class="detail"></div>
-											<label for="work113">BACK<span><em>BACK</em></span></label>
-										</div>
-									</div>
-								</div>
-							</div>
+							<span class="dot">&middot;</span>
+							<button type="button" onclick="ui.navClick.init(this, 'contact');">Contact</button>
 						</li>
 					</ul>
+				</nav>
+			</header>
+			<div class="bg_wrap"></div>
+			<div class="mask_box">
+				<div class="mask_top"></div>
+				<div class="mask_bottom"></div>
+			</div>
+			<div class="frame_wrap">
+				<div class="line_box">
+					<div class="frame_line line_top"></div>
+					<div class="frame_line line_right"></div>
+					<div class="frame_line line_bottom"></div>
+					<div class="frame_line line_left"></div>
 				</div>
-			</section>
-
-			<!-- animate_wrap : 원형 -->
-			<div class="animate_wrap">
-				<div class="circle_box">
-					<div class="circle01">
-						<span>HTML5</span>
-					</div>
-					<div class="circle02">
-						<span>CSS3</span>
-					</div>
-					<div class="circle03">
-						<span>Javascript</span>
-					</div>
-					<div class="circle04">
-						<span>jQuery</span>
-					</div>
-				</div>
-				<button type="button" class="btn_main_ment">
-					<div class="fir_ment disb">
-						<p class="txt_mask"><span class="txt txt01">Do hire</span></p>
-						<p class="txt_mask"><span class="txt txt02">people who</span></p>
-						<p class="txt_mask"><span class="txt txt03">will get</span></p>
-						<p class="txt_mask"><span class="txt txt043">things done.</span></p>
-					</div>
-					<div class="sec_ment">
-						MAKE
-						<div class="flip">
-							<div class="box01"><span>HTML5</span></div>
-							<div class="box02"><span>CSS3</span></div>
-							<div class="box03"><span>JAVASCRIPT</span></div>
-							<div class="box04"><span>JQUERY</span></div>
-							<div class="box05"><span>ANYWAY</span></div>
+			</div>
+			<main id="container" class="container">
+				<div class="content">
+					<section class="sec_wrap selected_section" data-section="home" style="opacity:1;">
+						<div class="sec_cont home">
+							<div class="sec_item">
+								<p class="home_desc">
+									저는 협업하는것을 좋아합니다.<br>
+									그 어떠한 자리나 팀원이든,<br>
+									화합하여 예상 이상의 성과를<br>
+									거두어 왔습니다.
+								</p>
+								<p class="home_desc">
+									<strong>좀 더 나은!</strong>
+									설계를 위해 기획자와 구상하고,<br>
+									<strong>좀 더 나은!</strong>
+									레이아웃을 위해 디자이너와 토론하며,<br>
+									<strong>좀 더 나은!</strong>
+									환경을 위해 개발자와 머리를 맞대어<br>
+									문제점을 찾습니다.
+								</p>
+								<p class="home_desc">
+									새로운 것을 만들고, 도전을 두려워하지 않는<br>
+									<strong>웹에서 불가능이란 없다!<br>
+									정경진입니다.</strong>
+								</p>
+							</div>
 						</div>
-						AWESOME!
-					</div>
-				</button>
-			</div><!-- //animate_wrap -->
+					</section>
+					<section class="sec_wrap" data-section="info">
+						<div class="sec_cont info">
+							<div class="sec_item">
+								<div class="idpicture">
+									<img src="/career/resources/images/info/img_id_picture.jpg" alt="정경진">
+								</div>
+								<div class="intro_wrap">
+									<div class="intro_item">
+										<p class="title">Profile</p>
+										<dl>
+											<dt>NAME</dt>
+											<dd>정경진</dd>
+											<dt>PHONE</dt>
+											<dd><a href="tel:010-5701-9927">010-5701-9927</a></dd>
+											<dt>MAIL</dt>
+											<dd><a href="mailto:hijkg2@naver.com">hijkg2@naver.com</a></dd>
+											<dt>ADDRESS</dt>
+											<dd>경기도 부천시 상동로 117번길 64<br>라일락대우유림아파트 2331동 1104호</dd>
+										</dl>
+									</div>
+									<div class="intro_item">
+										<p class="title">Career</p>
+										<dl>
+											<dt>애드캡슐소프트(주)</dt>
+											<dd>
+												<span>2019년 11월 ~</span>
+												<span>책임 &#47; Front-End팀</span>
+												<span>구축 및 운영 UI개발, 웹퍼블리싱</span>
+											</dd>
+											<dt>NH농협은행 농협카드 분사</dt>
+											<dd>
+												<span>2018년 10월 ~ 2019년 10월</span>
+												<span>대리 &#47; 카드디지털플랫폼팀</span>
+												<span>농협카드 Web&#47;APP 운영 퍼블리싱</span>
+											</dd>
+											<dt>애드캡슐소프트(주)</dt>
+											<dd>
+												<span>2016년 3월 ~ 2018년 10월</span>
+												<span>대리 &#47; Front-End팀</span>
+												<span>구축 및 운영 UI개발, 웹퍼블리싱</span>
+											</dd>
+											<dt>유니드컴즈</dt>
+											<dd>
+												<span>2014년 10월 ~ 2015년 12월</span>
+												<span>주임 &#47; 퍼블리싱파트</span>
+												<span>쇼핑몰 호스팅을 이용한 쇼핑몰사이트 구축 및 운영 웹 퍼블리싱</span>
+											</dd>
+										</dl>
+									</div>
+									<div class="intro_item">
+										<p class="title">Level of education</p>
+										<dl>
+											<dt>부명정보산업고등학교</dt>
+											<dd>
+												<span>2005년 3월 ~ 2008년 2월</span>
+												<span>웹디자인과</span>
+											</dd>
+											<dt>유한대학교</dt>
+											<dd>
+												<span>2009년 3월 ~ 2013년 2월</span>
+												<span>시각디자인과</span>
+											</dd>
+										</dl>
+									</div>
+									<div class="intro_item">
+										<p class="title">Skill &amp; Tools</p>
+										<dl>
+											<dt>기술</dt>
+											<dd>
+												<span>HTML5, CSS3, Scss, Javascript, jQuery, JS Libraries, jQueyr Ui</span>
+											</dd>
+											<dt>협업툴</dt>
+											<dd>
+												<span><strong>Communication :</strong><br>Slack, Jandi, E-Mail</span>
+												<span><strong>Project :</strong><br>Notion, Google Docs, Redmine, Git, Eclipse, Intelli J, Tortoise</span>
+												<span><strong>Planning :</strong><br>PowerPoint, Google Docs, Excel</span>
+												<span><strong>Design :</strong><br>Zeplin, Sketch, Figma, PhotoShop, Illustrator</span>
+												<span><strong>Editor :</strong><br>VS Code, Edit Plus, Sublime Text</span>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="sec_wrap" data-section="projects">
+						<div class="sec_cont projects">
+							<div id="projectsList" class="sec_item"></div>
+						</div>
+					</section>
+					<section class="sec_wrap" data-section="contact">
+						<div class="sec_cont contact">
+							<div class="sec_item">
+								<p class="contact_desc">
+									제 실력을 당당히 펼치고<br>
+									인정받을 수 있는 일이 좋습니다.<br>
+									지금 제가 하는일이 그 일이라<br>
+									믿어 의심치 않습니다.<br>
+									제 작은 능력이라도 최상으로<br>
+									발휘할 수 있도록 기회를 주는 곳이라면,<br>
+									언제든지 준비가 되어있습니다.
+								</p>
+								<div class="contact_address">
+									<p class="title">Contact Us</p>
+									<a href="mailto:hijkg2@naver.com">Mail To ↗</a>
+									<a href="tel:010-5701-9927">Phone Number ↗</a>
+									<p class="title">Who am I</p>
+									<a href="https://www.instargram.com/kyungjin_1989" target="_blank">Instargram ↗</a>
+									<a href="https://cloud-sailfish-b71.notion.site/93c98923c51b4fab946f9792f74c1afa" target="_blank">Resume Notion ↗</a>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</main>
+			<div class="color_mode_wrap">
+				<input type="radio" name="colorMode" checked="checked" id="colorMode01" value="1" onclick="handleClick(this);">
+				<label for="colorMode01">LIGHT</label>
+				<input type="radio" name="colorMode" id="colorMode02" value="2" onclick="handleClick(this);">
+				<label for="colorMode02">DARK</label>
+			</div>
 		</div>
-		
-	</div>
-	<footer>
-		<div class="inner">
-			<p class="title">Let's work together</p>
-			<p class="name">Jung Kyung Jin</p>
-			<a href="tel:010-5701-9927"></a>
-			<a href="mailto:hijkg8911@gmail.com"></a>
+		<div class="loading_box">
+			<p><strong>Jung Kyungjin`s</strong> Career</p>
 		</div>
-	</footer>
+		<script src="/career/resources/js/ui.js"></script>
+	</body>
 
-	<script>include.endJS();</script>
-</body>
 </html>

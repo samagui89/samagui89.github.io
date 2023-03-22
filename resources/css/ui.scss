@@ -1,0 +1,73 @@
+@import "common.scss";
+
+/* ========== Basic ========== */
+.frame_wrap {
+	.mask_box {
+		position:fixed;
+		top:$per;
+		left:$per;
+		z-index:3;
+		width:$per100;
+		height:$per100;
+		overflow:hidden;
+		pointer-events:none;
+	}
+	.line_box {
+		position:fixed;
+		top:$per;
+	}
+}
+.container {
+	position:fixed;
+	top:$zero;
+	left:$zero;
+	width:$per100;
+	height:$per100;
+	transform:translate3d(0px, 0px, 0px);
+}
+.content {
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:2;
+	overflow:hidden;
+	width:$per100;
+	height:$per100;
+	background-color:#ddd;
+}
+/* ========== // Basic ========== */
+
+/* ========== section ========== */
+section {
+	
+	&:before {
+		content:'';
+		position:fixed;
+		top:100px;
+		left:100px;
+		z-index:10;
+		width:calc($per100 - 200px);
+		height:calc($per100 - 200px);
+		border:1px solid #888;
+	}
+	.sec_cont {
+		overflow:auto;
+		position:absolute;
+		top:50%;
+		left:50%;
+		z-index:10;
+		width:$per100;
+		height:$per100;
+		padding:100px;
+		transform:translate(-50%, -50%);
+		.sec_item {
+			padding:100px;
+		}
+	}
+}
+/* ========== // section ========== */
+
+
+/* ========== Keyframes ========== */
+
+/* ========== // Keyframes ========== */

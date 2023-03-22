@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<project>
+		<name>롯데백화점 IT APP 운영</name>
+		<pcurl>https://www.lotteshopping.com/main/main</pcurl>
+		<mourl>https://m.lotteshopping.com/main?cstr=0001</mourl>
+		<date>2021.08 ~</date>
+		<skill>HTML, CSS, jQuery, Javascript, Vue, Datepicker, Swiper slider</skill>
+	</project>
+	<project>
+		<name>S1 홈페이지 리뉴얼 구축</name>
+		<pcurl>https://www.s1.co.kr/</pcurl>
+		<mourl>null</mourl>
+		<date>2021.02 ~ 2021.03</date>
+		<skill>HTML, CSS, jQuery, Javascript, AOS scroll library, Slick slider</skill>
+	</project>
+	<project>
+		<name>참 괜찮은 중소기업 일자리플랫폼 구축</name>
+		<pcurl>https://www.smes.go.kr/gsmb/</pcurl>
+		<mourl>https://www.smes.go.kr/gsmbm/</mourl>
+		<date>2020.06 ~ 2020.12</date>
+		<skill>HTML, CSS, jQuery, Javascript, Chart.js, Kakaomap api, Youtube iframeApi, Slick slider</skill>
+	</project>
+	<project>
+		<name>남동발전 영흥 에너지파크 리뉴얼</name>
+		<pcurl>https://www.koenergy.kr/kosep/ep/main.do</pcurl>
+		<mourl>null</mourl>
+		<date>2020.05 ~ 2020.06</date>
+		<skill>HTML, CSS, jQuery, bx slider, 반응형</skill>
+	</project>
+	<project>
+		<name>남동발전 신규 REC시스템 구축</name>
+		<pcurl>https://rec.koenergy.kr/</pcurl>
+		<mourl>null</mourl>
+		<date>2020.04 ~ 2020.05</date>
+		<skill>HTML, CSS, jQuery</skill>
+	</project>
+	<project>
+		<name>중소기업중앙회 노란우산 홈페이지 리뉴얼</name>
+		<pcurl>https://www.8899.or.kr/yuma/index.do</pcurl>
+		<mourl>https://yumam.kbiz.or.kr/yuma/index.do</mourl>
+		<date>2019.11 ~ 2020.03</date>
+		<skill>HTML, CSS, jQuery, Javascript, Slick slider, Swiper slider</skill>
+	</project>
+	<project>
+		<name>중소기업중앙회 공제기금 홈페이지 리뉴얼</name>
+		<pcurl>https://fund.kbiz.or.kr/</pcurl>
+		<mourl>https://fundm.kbiz.or.kr/</mourl>
+		<date>2019.11 ~ 2020.03</date>
+		<skill>HTML, CSS, jQuery, Javascript, Slick slider, Swiper slider</skill>
+	</project>
+	<project>
+		<name>NH농협카드 홈페이지 상시 유지운영</name>
+		<pcurl>https://card.nonghyup.com/IpCc0001M.act</pcurl>
+		<mourl>https://smartcard.nonghyup.com/ScCm0001M.act</mourl>
+		<date>2018.10 ~ 2019.10</date>
+		<skill>HTML, CSS, jQuery, Javascript, Swiper slider</skill>
+	</project>
+	<project>
+		<name>NH농협카드 PC홈페이지 접근성 프로젝트</name>
+		<pcurl>https://card.nonghyup.com/IpCc0001M.act</pcurl>
+		<mourl>null</mourl>
+		<date>2018.10 ~ 2019.01</date>
+		<skill>총괄 접근성 검수 및 가이드</skill>
+	</project>
+	<project>
+		<name>아시아나항공 온라인 채널 개편 구축</name>
+		<pcurl>https://flyasiana.com/</pcurl>
+		<mourl>https://m.flyasiana.com/</mourl>
+		<date>2017.09 ~ 2018.10</date>
+		<skill>HTML, CSS, jQuery, Javascript, FullPage.js, Swiper slider, Velocity.js</skill>
+	</project>
+	<project>
+		<name>한국남동발전 U`Sol 신재생에너지 구축</name>
+		<pcurl>http://www.usolar.co.kr/main.do</pcurl>
+		<mourl>null</mourl>
+		<date>2017.08 ~ 2017.09</date>
+		<skill>HTML, CSS, jQuery, Javascript, Kakaomap api, 반응형</skill>
+	</project>
+	<project>
+		<name>삼성서울병원 암병원 UI개선 부분리뉴얼</name>
+		<pcurl>http://www.samsunghospital.com/home/cancer/main/index.do</pcurl>
+		<mourl>null</mourl>
+		<date>2017.06 ~ 2017.08</date>
+		<skill>HTML, CSS, jQuery, Javascript, Swiper Slider</skill>
+	</project>
+	<project>
+		<name>삼성증권 해외펀드 정보시스템 리뉴얼</name>
+		<pcurl>null</pcurl>
+		<mourl>null</mourl>
+		<date>2017.03 ~ 2017.04</date>
+		<skill>HTML, CSS, jQuery, Javascript, Google Chart</skill>
+	</project>
+	<project>
+		<name>중부발전 외부홈페이지 통합개편</name>
+		<pcurl>https://www.komipo.co.kr/kor/main/main.do</pcurl>
+		<mourl>null</mourl>
+		<date>2017.01 ~ 2017.03</date>
+		<skill>HTML, CSS, jQuery, Javascript, Slick Slider, 반응형</skill>
+	</project>
+	<project>
+		<name>삼성증권 UX개편 리뉴얼</name>
+		<pcurl>https://www.samsungpop.com/index.jsp</pcurl>
+		<mourl>http://www.samsungpop.com/mbw/main/main.do?cmd=main</mourl>
+		<date>2016.06 ~ 2016.12</date>
+		<skill>HTML, CSS, jQuery, Javascript, Swiper Slider, Google Chart</skill>
+	</project>
+	<project>
+		<name>쇼핑몰 호스팅서비스를 이용한 쇼핑몰 구축 및 유지운영</name>
+		<pcurl>null</pcurl>
+		<mourl>null</mourl>
+		<date>2014.10 ~ 2015.12</date>
+		<skill>HTML, CSS, jQuery, Javascript, Swiper Slider, SessionStorage</skill>
+	</project>
+</data>
