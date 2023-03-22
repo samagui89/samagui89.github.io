@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+// Font import
+@font-face {
+    font-family:'Noto';
+    font-weight:600;
+    src: url('../fonts/NotoSansKR-Bold.otf') format('opentype'),
+        url('../fonts/NotoSansKR-Bold.otf') format('opentype'),
+        url('../fonts/NotoSansKR-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family:'Noto';
+    font-weight:400;
+    src: url('../fonts/NotoSansKR-Regular.otf') format('opentype'),
+        url('../fonts/NotoSansKR-Regular.otf') format('opentype'),
+        url('../fonts/NotoSansKR-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family:'Noto';
+    font-weight:200;
+    src: url('../fonts/NotoSansKR-Light.otf') format('opentype'),
+        url('../fonts/NotoSansKR-Light.otf') format('opentype'),
+        url('../fonts/NotoSansKR-Light.otf') format('opentype');
+}
+
+$col_wh : #ffffff;
+$col_33 : #333333;
+$col_66 : #666666;
+$col_99 : #999999;
+$col_bk : #000000;
+$col_f1 : #f1f1f1;
+$col_ht : linear-gradient(45deg, rgba(242,107,45,0.7) 0%, rgba(143,59,59,0.7) 100%);
+$col_cs : linear-gradient(135deg, rgba(50,170,219,0.7) 0%, rgba(94,59,143,0.7) 100%);
+$col_js : linear-gradient(135deg, rgba(241,192,35,0.7) 0%, rgba(198,241,35,0.7) 100%);
+$col_jq : linear-gradient(45deg, rgba(59,143,78,0.7) 0%, rgba(35,241,221,0.7) 100%); /* 0d66a5 */
+
+$col_snow : rgba(200, 200, 200, 0.4);
+$spacing: 2560px;
+$time-1: 60s;
+$time-2: 120s;
+$time-3: 180s;
+$time-4: 200s;
+
+/* mixins */
+@function particles($max) {
+    $val: 0px 0px $col_wh;
+    @for $i from 1 through $max {
+        $val: #{$val}, random($spacing)+px random($spacing)+px $col_snow;
+    }
+    @return $val;
+}
+
+@mixin particles($max) {
+    box-shadow: particles($max);
+    border-radius: 50%;
+}
+
+@import "reset";
+@import "common";
+@import "ui";
+@import "animation";

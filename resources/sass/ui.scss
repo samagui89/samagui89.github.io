@@ -1,0 +1,1169 @@
+.content{
+	section {
+		min-height:100vh;
+	}
+	.sec01 {
+		position:relative;
+		// height:100vh;
+		.visual_wrap {
+			position:relative;
+			overflow:hidden;
+			display:flex;
+			height:100vh;
+			&:before {
+				content:'';
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background-color:rgba(0, 0, 0, 0.5);
+				z-index:1;
+			}
+			.visual_bg{
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				z-index:3;
+				> span {
+					height: 20px;
+					width: 20px;
+					border-radius: 50%;
+					position: absolute;
+					pointer-events: none;
+					background: rgba(205, 245, 255, 0.2);
+					transform: translate(-50%, -50%);
+					animation: blow 4s linear infinite;	
+				}
+			}
+			iframe {
+				position:fixed;
+				top:50%;
+				left:50%;
+				width:150%;
+				height:150%;
+				transform:translate(-50%, -50%);
+				z-index:1;
+			}
+			.bgParticles {
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				z-index:2;
+			}
+			/* 눈내린다
+			.bg_svg_box {
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				z-index:2;
+				.particle {
+					background: transparent;
+					&:after {
+						position: absolute;
+						content: "";
+						top: $spacing;
+						background: transparent;
+					}
+					&.particle_1 {
+						animation: animParticle $time-1 linear infinite;
+						@include particles(1000);
+						height: 6px;
+						width: 6px;
+						&:after {
+							@include particles(900);
+							height: 2px;
+							width: 2px;
+						}
+					}
+					&.particle_2 {
+						animation: animParticle $time-2 linear infinite;
+						@include particles(800);
+						height: 4px;
+						width: 4px;
+						&:after {
+							@include particles(500);
+							height: 5px;
+							width: 5px;
+						}
+					}
+					&.particle_3:after {
+						animation: animParticle $time-3 linear infinite;
+						@include particles(1200);
+						height: 3px;
+						width: 3px;
+						&:after {
+							@include particles(1100);
+							height: 5px;
+							width: 5px;
+							border-radius: 50%;
+						}
+					}
+					&.particle_4 {
+						animation: animParticle $time-4 linear infinite;
+						@include particles(1200);
+						height: 4px;
+						width: 4px;
+						&:after {
+							@include particles(700);
+							height: 1px;
+							width: 1px;
+						}
+					}
+				}
+			} */
+			.name {
+				position:absolute;
+				bottom:0;
+				right:0;
+				color:rgba(255, 255, 255, 0.3);
+				font-size:60px;
+				font-weight:600;
+			}
+		}
+	}
+	.sec02 {
+		position:relative;
+		height:250vh;
+		background:linear-gradient(to bottom, rgb(0,0,0) 0%,rgb(38,56,71) 30%,rgb(73,50,39) 60%,rgb(0,0,0) 100%);;
+		z-index:1;
+		> svg {
+			width: 90vw;
+			margin: 5vw 0 15vw 5vw;
+		}
+		path {
+			stroke-dasharray: 7150;
+			stroke-dashoffset: 7150;
+		}
+	}
+	.sec03 {
+		position:relative;
+		padding:100px 0;
+		background-color:#ddd;
+		z-index:1;
+		.work_list{
+			li{
+				position:relative;
+				display:block;
+				width:1100px;
+				height:800px;
+				margin:60px auto;
+				transition:all .1s linear;
+				perspective-origin:center;
+    			perspective:1200px;
+				
+				.card {
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:800px;
+					margin:0 auto;
+					transform:scale(0.9) rotateX(-15deg);
+					transition:transform .2s linear;
+					perspective: 1200px;
+					> input[type="checkbox"] {
+						position:absolute;
+						top:50%;
+						left:50%;
+						width:1px;
+						height:1px;
+						z-index:-1;
+	
+						&:checked ~ .card_inner{
+							transform: rotateY(180deg);
+						}
+					}
+					.card_inner {
+						position:relative;
+						width:100%;
+						height:100%;
+						transform-style: preserve-3d;
+						transition:transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+						.front,
+						.back {
+							position:absolute;
+							top:0;
+							left:0;
+							width:100%;
+							height:100%;
+							backface-visibility: hidden;
+							transform-style: preserve-3d;
+							border-radius: 6px;
+							.inner {
+								height: 100%;
+								padding: 25px;
+								transform: translateZ(80px) scale(0.94);
+							}
+						}
+						.front {
+							background-repeat:no-repeat;
+							background-size:150% auto;
+							background-position:top left;
+							&:after {
+								content:'';
+								position:absolute;
+								top:0;
+								left:0;
+								width:100%;
+								height:100%;
+								display:block;
+								border-radius:6px;
+								backface-visibility: hidden;
+								background: linear-gradient(
+									40deg,
+									rgba(67, 138, 243, 0.7),
+									rgba(255, 242, 166, 0.7)
+								);
+							}
+							&.work01{
+								background-image:url('/resources/images/works/img_work_01_main_01.png');
+								animation: bgtlcrblMove 30s linear infinite;
+							}
+							&.work02{
+								background-image:url('/resources/images/works/img_work_02_main_01.png');
+								animation: bgtrclbrMove 30s linear infinite;
+							}
+							&.work03{
+								background-image:url('/resources/images/works/img_work_03_main_01.png');
+								animation: bgtlbrMove 30s linear infinite;
+							}
+							&.work04{
+								background-image:url('/resources/images/works/img_work_04_main_01.png');
+								animation: bgtrblMove 30s linear infinite;
+							}
+							&.work05{
+								background-image:url('/resources/images/works/img_work_05_main_01.png');
+								animation: bgtlcrblMove 30s linear infinite;
+							}
+							&.work06{
+								background-image:url('/resources/images/works/img_work_06_main_01.png');
+								animation: bgtrclbrMove 30s linear infinite;
+							}
+							&.work07{
+								background-image:url('/resources/images/works/img_work_07_main_01.png');
+								animation: bgtlbrMove 30s linear infinite;
+							}
+							&.work08{
+								background-image:url('/resources/images/works/img_work_08_main_01.png');
+								animation: bgtrblMove 30s linear infinite;
+							}
+							&.work09{
+								background-image:url('/resources/images/works/img_work_09_main_01.png');
+								animation: bgtlcrblMove 30s linear infinite;
+							}
+							&.work10{
+								background-image:url('/resources/images/works/img_work_10_main_01.png');
+								animation: bgtrclbrMove 30s linear infinite;
+							}
+							&.work11{
+								background-image:url('/resources/images/works/img_work_11_main_01.png');
+								animation: bgtlbrMove 30s linear infinite;
+							}
+							&.work12{
+								background-image:url('/resources/images/works/img_work_12_main_01.png');
+								animation: bgtrblMove 30s linear infinite;
+							}
+							.inner {
+								display: grid;
+								grid-template-rows: 3.5fr 1fr 1fr 1fr 3.5fr;
+								justify-items: center;
+								transform:translateZ(80px) scale(0.94);
+								text-align:center;
+								z-index:2;
+								.owner {
+									grid-row: 2;
+									color:$col_wh;
+									font-size:2.0em;
+									font-weight:600;
+								}
+								.title {
+									grid-row: 3;
+									color:$col_wh;
+									font-size:2.8em;
+									font-weight:600;
+								}
+								label {
+									grid-row: 4;
+									position:relative;
+									display:inline-block;
+									margin-top:30px;
+									padding:10px 30px;
+									border:3px solid $col_wh;
+									border-radius:6px;
+									color:$col_wh;
+									font-size:1.8em;
+									cursor:pointer;
+									span {
+										position:absolute;
+										overflow:hidden;
+										top:0;
+										left:0;
+										width:0;
+										height:100%;
+										background-color:$col_wh;
+										transition:width 0.2s linear;
+										em {
+											position:absolute;
+											top:0;
+											left:0;
+											bottom:0;
+											right:0;
+											width:100%;
+											height:100%;
+											padding:10px 30px;
+											background: linear-gradient(to right, rgb(67, 138, 243), rgb(255, 242, 166));
+											-webkit-background-clip: text;
+											-webkit-text-fill-color: transparent;
+											text-align:center;
+											color:rgba(67, 138, 243, 0.7);
+											font-size:1.8em;
+											font-style:normal;
+											font-weight:600;
+										}
+									}
+									&:hover{
+										span {
+											width:100%;
+										}
+									}
+								}
+							}
+						}
+						.back {
+							transform: rotateY(180deg);
+							background-color:$col_wh;
+							border:2px solid linear-gradient(
+								40deg,
+								rgba(67, 138, 243, 0.7),
+								rgba(255, 242, 166, 0.7)
+							);
+							.inner {
+								display:block;
+								
+								label {
+									grid-row: 4;
+									position:absolute;
+									bottom:30px;
+									left:50%;
+									display:inline-block;
+									padding:10px 30px;
+									border-radius:6px;
+									background:linear-gradient(to right, rgb(67, 138, 243), rgb(255, 242, 166));
+									color:$col_wh;
+									font-size:1.8em;
+									transform:translateX(-50%);
+									cursor:pointer;
+									span {
+										position:absolute;
+										overflow:hidden;
+										top:0;
+										left:-1px;
+										width:0;
+										height:100%;
+										background-color:$col_wh;
+										transition:width 0.2s linear;
+										em {
+											position:absolute;
+											top:0;
+											left:0;
+											bottom:0;
+											right:0;
+											width:100%;
+											height:100%;
+											padding:10px 30px;
+											background: linear-gradient(to right, rgb(67, 138, 243), rgb(255, 242, 166));
+											-webkit-background-clip: text;
+											-webkit-text-fill-color: transparent;
+											text-align:center;
+											color:rgba(67, 138, 243, 0.7);
+											font-size:1.8em;
+											font-style:normal;
+											font-weight:600;
+										}
+									}
+									&:hover{
+										
+										span {
+											width:101%;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.active {
+					width:1200px;
+					.card {
+						transform:scale(1) rotateX(0deg);
+					}
+				}
+				&.rotate {
+					width:1100px;
+					.card {
+						transform:scale(0.9) rotateX(15deg);
+					}
+				}
+			}
+		}
+		&:after {
+			content:'';
+			clear:both;
+			display:block;
+		}
+	}
+	.animate_wrap {
+		position:fixed;
+		top:50%;
+		left:50%;
+		width:500px;
+		height:500px;
+		transform:translate(-50%, -50%) rotate(0deg);
+		transition:transform 0.5s;
+		z-index:10;
+		.circle_box {
+			$size: 0;
+			width:500px;
+			height:500px;
+			border-radius:100%;
+			background-color:rgba(255, 255, 255, 0.2);
+			font-size:0;
+			box-shadow:inset 0px 0px 30px 30px rgba(200, 200, 200, 0.2);
+			> div {
+				position:absolute;
+				display:inline-block;
+				width:250px;
+				height:250px;
+				padding:0;
+				background-color:transparent;
+				text-align:center;
+				transition: all 0.5s, background-color 1s;
+				&:before {
+					content:'';
+					opacity:0;
+					transition:opacity 0.5s linear;
+				}
+				span {
+					display:inline-block;
+					line-height:250px;
+					color:$col_wh;
+					font-size:24px;
+					font-weight:600;
+					transform:scale(0);
+				}
+			}
+			.circle01{
+				top:$size;
+				left:$size;
+				border-radius:100% 0 0 0;
+			}
+			.circle02{
+				top:$size;
+				right:$size;
+				border-radius:0 100% 0 0;
+			}
+			.circle03{
+				bottom:$size;
+				left:$size;
+				border-radius:0 0 0 100%;
+			}
+			.circle04{
+				bottom:$size;
+				right:$size;
+				border-radius:0 0 100% 0;
+			}
+			&.active {
+				$size : -140px;
+				
+				> div {
+					overflow:hidden;
+					width:350px;
+					height:350px;
+					padding:20px;
+					border-radius:100%;
+					color:$col_wh;
+					cursor:pointer;
+					transition:all 0.5s linear, background-color 1s linear;
+					&:before {
+						content:'';
+						display:block;
+						position:absolute;
+						top:20px;
+						left:20px;
+						width:310px;
+						height:310px;
+						border:2px dashed $col_wh;
+						border-radius:100%;
+						opacity:1;
+						animation: turn 20s linear infinite;
+						transition:opacity 0.5s linear 1s;
+					}
+					&.pong {
+						transform:scale(1.5);
+						animation: pong 0.8s linear;
+					}
+					&:after {
+						content:'';
+						display:block;
+						position:absolute;
+						top:0;
+						left:0;
+						width:100%;
+						height:100%;
+						opacity:0;
+						background-size:cover;
+						background-repeat:no-repeat;
+						background-position:center;
+						z-index:1;
+						transition:opacity 1s linear;
+					}
+					&.circle01{
+						animation:secScale1 12s linear infinite;
+						&:after {
+							background-image:url('/resources/images/about/img_coding_html.gif');
+						}
+					}
+					&.circle02{
+						animation:secScale2 12s linear infinite;
+						&:after {
+							background-image:url('/resources/images/about/img_coding_css.gif');
+						}
+					}
+					&.circle03{
+						animation:secScale3 12s linear infinite;
+						&:after {
+							background-image:url('/resources/images/about/img_coding_js.gif');
+						}
+					}
+					&.circle04{
+						animation:secScale4 12s linear infinite;
+						&:after {
+							background-image:url('/resources/images/about/img_coding_jq.gif');
+						}
+					}
+					span {
+						position:relative;
+						overflow:hidden;
+						width:310px;
+						height:310px;
+						border-radius:100%;
+						line-height:310px;
+						vertical-align:middle;
+						color:$col_bk;
+						font-size:1.6em;
+						transition:all 0.5s linear;
+						z-index:2;
+					}
+					&:hover {
+						&:after {
+							opacity:0.4;
+						}
+						span{
+							text-shadow:none;
+							color:$col_wh;
+							font-size:2.4em;
+							transition:all 0.5s linear, color 1s;
+						}
+					}
+				}
+				.circle01{
+					top:$size;
+					left:$size * 2.5;
+					background:$col_ht;
+					span {
+						text-shadow:
+							-1em -1em 0em rgba(255, 255, 255, 0.10),
+							-2em -2em 0em rgba(255, 255, 255, 0.15),
+							-3em -3em 0em rgba(255, 255, 255, 0.20),
+							-4em -4em 0em rgba(255, 255, 255, 0.25),
+							-5em -5em 0em rgba(255, 255, 255, 0.30),
+							-6em -6em 0em rgba(255, 255, 255, 0.35),
+							1em 1em 0em rgba(255, 255, 255, 0.10),
+							2em 2em 0em rgba(255, 255, 255, 0.15),
+							3em 3em 0em rgba(255, 255, 255, 0.20),
+							4em 4em 0em rgba(255, 255, 255, 0.25),
+							5em 5em 0em rgba(255, 255, 255, 0.30),
+							6em 6em 0em rgba(255, 255, 255, 0.35),
+
+							3.5em 0em 0em rgba(255, 255, 255, 0.10),
+							2.5em -1em 0em rgba(255, 255, 255, 0.10),
+							1.5em -2em 0em rgba(255, 255, 255, 0.15),
+							0.5em -3em 0em rgba(255, 255, 255, 0.20),
+							-0.5em -4em 0em rgba(255, 255, 255, 0.25),
+							-1.5em -5em 0em rgba(255, 255, 255, 0.30),
+							-2.5em -6em 0em rgba(255, 255, 255, 0.35),
+							-3.5em -7em 0em rgba(255, 255, 255, 0.40),
+							4.5em 1em 0em rgba(255, 255, 255, 0.10),
+							5.5em 2em 0em rgba(255, 255, 255, 0.15),
+							6.5em 3em 0em rgba(255, 255, 255, 0.20),
+							7.5em 4em 0em rgba(255, 255, 255, 0.25),
+							8.5em 5em 0em rgba(255, 255, 255, 0.30),
+
+							7em 0em 0em rgba(255, 255, 255, 0.15),
+							6em -1em 0em rgba(255, 255, 255, 0.15),
+							5em -2em 0em rgba(255, 255, 255, 0.20),
+							4em -3em 0em rgba(255, 255, 255, 0.25),
+							3em -4em 0em rgba(255, 255, 255, 0.30),
+							2em -5em 0em rgba(255, 255, 255, 0.35),
+							1em -6em 0em rgba(255, 255, 255, 0.40),
+							0em -7em 0em rgba(255, 255, 255, 0.45),
+							-1em -8em 0em rgba(255, 255, 255, 0.50),
+							8em 1em 0em rgba(255, 255, 255, 0.10),
+							9em 2em 0em rgba(255, 255, 255, 0.15),
+							10em 3em 0em rgba(255, 255, 255, 0.20),
+							11em 4em 0em rgba(255, 255, 255, 0.25),
+
+							10.5em 0em 0em rgba(255, 255, 255, 0.20),
+							9.5em -1em 0em rgba(255, 255, 255, 0.20),
+							8.5em -2em 0em rgba(255, 255, 255, 0.25),
+							7.5em -3em 0em rgba(255, 255, 255, 0.30),
+							6.5em -4em 0em rgba(255, 255, 255, 0.35),
+							5.5em -5em 0em rgba(255, 255, 255, 0.40),
+							4.5em -6em 0em rgba(255, 255, 255, 0.45),
+							3.5em -7em 0em rgba(255, 255, 255, 0.50),
+							11.5em 1em 0em rgba(255, 255, 255, 0.25),
+							12.5em 2em 0em rgba(255, 255, 255, 0.30),
+							13.5em 3em 0em rgba(255, 255, 255, 0.35),
+
+							-3.5em 0em 0em rgba(255, 255, 255, 0.10),
+							-4.5em -1em 0em rgba(255, 255, 255, 0.15),
+							-5.5em -2em 0em rgba(255, 255, 255, 0.20),
+							-6.5em -3em 0em rgba(255, 255, 255, 0.25),
+							-7.5em -4em 0em rgba(255, 255, 255, 0.30),
+							-8.5em -5em 0em rgba(255, 255, 255, 0.35),
+							-2.5em 1em 0em rgba(255, 255, 255, 0.10),
+							-1.5em 2em 0em rgba(255, 255, 255, 0.15),
+							-0.5em 3em 0em rgba(255, 255, 255, 0.20),
+							0.5em 4em 0em rgba(255, 255, 255, 0.25),
+							1.5em 5em 0em rgba(255, 255, 255, 0.30),
+							2.5em 6em 0em rgba(255, 255, 255, 0.35),
+							3.5em 7em 0em rgba(255, 255, 255, 0.40),
+
+							-7em 0em 0em rgba(255, 255, 255, 0.15),
+							-8em -1em 0em rgba(255, 255, 255, 0.20),
+							-9em -2em 0em rgba(255, 255, 255, 0.25),
+							-10em -3em 0em rgba(255, 255, 255, 0.30),
+							-11em -4em 0em rgba(255, 255, 255, 0.35),
+							-6em 1em 0em rgba(255, 255, 255, 0.15),
+							-5em 2em 0em rgba(255, 255, 255, 0.20),
+							-4em 3em 0em rgba(255, 255, 255, 0.25),
+							-3em 4em 0em rgba(255, 255, 255, 0.30),
+							-2em 5em 0em rgba(255, 255, 255, 0.35),
+							-1em 6em 0em rgba(255, 255, 255, 0.40),
+							0em 7em 0em rgba(255, 255, 255, 0.45),
+							1em 8em 0em rgba(255, 255, 255, 0.50),
+
+							-10.5em 0em 0em rgba(221, 162, 162, 0.3),
+							-11.5em -1em 0em rgba(255, 255, 255, 0.25),
+							-12.5em -2em 0em rgba(255, 255, 255, 0.30),
+							-13.5em -3em 0em rgba(255, 255, 255, 0.35),
+							-9.5em 1em 0em rgba(255, 255, 255, 0.20),
+							-8.5em 2em 0em rgba(255, 255, 255, 0.25),
+							-7.5em 3em 0em rgba(255, 255, 255, 0.30),
+							-6.5em 4em 0em rgba(255, 255, 255, 0.35),
+							-5.5em 5em 0em rgba(255, 255, 255, 0.40),
+							-4.5em 6em 0em rgba(255, 255, 255, 0.45),
+							-3.5em 7em 0em rgba(255, 255, 255, 0.50);
+					}
+				}
+				.circle02{
+					top:$size;
+					right:$size * 2.5;
+					background:$col_cs;
+					span {
+						text-shadow:
+							-1em -1em 0em rgba(255, 255, 255, 0.10),
+							-2em -2em 0em rgba(255, 255, 255, 0.15),
+							-3em -3em 0em rgba(255, 255, 255, 0.20),
+							-4em -4em 0em rgba(255, 255, 255, 0.25),
+							-5em -5em 0em rgba(255, 255, 255, 0.30),
+							-6em -6em 0em rgba(255, 255, 255, 0.35),
+							1em 1em 0em rgba(255, 255, 255, 0.10),
+							2em 2em 0em rgba(255, 255, 255, 0.15),
+							3em 3em 0em rgba(255, 255, 255, 0.20),
+							4em 4em 0em rgba(255, 255, 255, 0.25),
+							5em 5em 0em rgba(255, 255, 255, 0.30),
+							6em 6em 0em rgba(255, 255, 255, 0.35),
+
+							2.5em 0em 0em rgba(255, 255, 255, 0.10),
+							1.5em -1em 0em rgba(255, 255, 255, 0.10),
+							0.5em -2em 0em rgba(255, 255, 255, 0.15),
+							-0.5em -3em 0em rgba(255, 255, 255, 0.20),
+							-1.5em -4em 0em rgba(255, 255, 255, 0.25),
+							-2.5em -5em 0em rgba(255, 255, 255, 0.30),
+							-3.5em -6em 0em rgba(255, 255, 255, 0.35),
+							-4.5em -7em 0em rgba(255, 255, 255, 0.40),
+							3.5em 1em 0em rgba(255, 255, 255, 0.10),
+							4.5em 2em 0em rgba(255, 255, 255, 0.15),
+							5.5em 3em 0em rgba(255, 255, 255, 0.20),
+							6.5em 4em 0em rgba(255, 255, 255, 0.25),
+							7.5em 5em 0em rgba(255, 255, 255, 0.30),
+
+							5em 0em 0em rgba(255, 255, 255, 0.15),
+							4em -1em 0em rgba(255, 255, 255, 0.15),
+							3em -2em 0em rgba(255, 255, 255, 0.20),
+							2em -3em 0em rgba(255, 255, 255, 0.25),
+							1em -4em 0em rgba(255, 255, 255, 0.30),
+							0em -5em 0em rgba(255, 255, 255, 0.35),
+							-1em -6em 0em rgba(255, 255, 255, 0.40),
+							-2em -7em 0em rgba(255, 255, 255, 0.45),
+							-3em -8em 0em rgba(255, 255, 255, 0.50),
+							6em 1em 0em rgba(255, 255, 255, 0.10),
+							7em 2em 0em rgba(255, 255, 255, 0.15),
+							8em 3em 0em rgba(255, 255, 255, 0.20),
+							9em 4em 0em rgba(255, 255, 255, 0.25),
+
+							7.5em 0em 0em rgba(255, 255, 255, 0.20),
+							6.5em -1em 0em rgba(255, 255, 255, 0.20),
+							5.5em -2em 0em rgba(255, 255, 255, 0.25),
+							4.5em -3em 0em rgba(255, 255, 255, 0.30),
+							3.5em -4em 0em rgba(255, 255, 255, 0.35),
+							2.5em -5em 0em rgba(255, 255, 255, 0.40),
+							1.5em -6em 0em rgba(255, 255, 255, 0.45),
+							0.5em -7em 0em rgba(255, 255, 255, 0.50),
+							8.5em 1em 0em rgba(255, 255, 255, 0.25),
+							9.5em 2em 0em rgba(255, 255, 255, 0.30),
+							10.5em 3em 0em rgba(255, 255, 255, 0.35),
+
+							10em 0em 0em rgba(255, 255, 255, 0.20),
+							9em -1em 0em rgba(255, 255, 255, 0.20),
+							8em -2em 0em rgba(255, 255, 255, 0.25),
+							7em -3em 0em rgba(255, 255, 255, 0.30),
+							6em -4em 0em rgba(255, 255, 255, 0.35),
+							5em -5em 0em rgba(255, 255, 255, 0.40),
+							4em -6em 0em rgba(255, 255, 255, 0.45),
+							11em 1em 0em rgba(255, 255, 255, 0.25),
+							12em 2em 0em rgba(255, 255, 255, 0.30),
+
+							-2.5em 0em 0em rgba(255, 255, 255, 0.10),
+							-3.5em -1em 0em rgba(255, 255, 255, 0.15),
+							-4.5em -2em 0em rgba(255, 255, 255, 0.20),
+							-5.5em -3em 0em rgba(255, 255, 255, 0.25),
+							-6.5em -4em 0em rgba(255, 255, 255, 0.30),
+							-7.5em -5em 0em rgba(255, 255, 255, 0.35),
+							-1.5em 1em 0em rgba(255, 255, 255, 0.10),
+							-0.5em 2em 0em rgba(255, 255, 255, 0.15),
+							0.5em 3em 0em rgba(255, 255, 255, 0.20),
+							1.5em 4em 0em rgba(255, 255, 255, 0.25),
+							2.5em 5em 0em rgba(255, 255, 255, 0.30),
+							3.5em 6em 0em rgba(255, 255, 255, 0.35),
+							4.5em 7em 0em rgba(255, 255, 255, 0.40),
+
+							-5em 0em 0em rgba(255, 255, 255, 0.15),
+							-6em -1em 0em rgba(255, 255, 255, 0.20),
+							-7em -2em 0em rgba(255, 255, 255, 0.25),
+							-8em -3em 0em rgba(255, 255, 255, 0.30),
+							-9em -4em 0em rgba(255, 255, 255, 0.35),
+							-4em 1em 0em rgba(255, 255, 255, 0.15),
+							-3em 2em 0em rgba(255, 255, 255, 0.20),
+							-2em 3em 0em rgba(255, 255, 255, 0.25),
+							-1em 4em 0em rgba(255, 255, 255, 0.30),
+							0em 5em 0em rgba(255, 255, 255, 0.35),
+							1em 6em 0em rgba(255, 255, 255, 0.40),
+							2em 7em 0em rgba(255, 255, 255, 0.45),
+							3em 8em 0em rgba(255, 255, 255, 0.50),
+
+							-7.5em 0em 0em rgba(255, 255, 255, 0.20),
+							-8.5em -1em 0em rgba(255, 255, 255, 0.25),
+							-9.5em -2em 0em rgba(255, 255, 255, 0.30),
+							-10.5em -3em 0em rgba(255, 255, 255, 0.35),
+							-6.5em 1em 0em rgba(255, 255, 255, 0.20),
+							-5.5em 2em 0em rgba(255, 255, 255, 0.25),
+							-4.5em 3em 0em rgba(255, 255, 255, 0.30),
+							-3.5em 4em 0em rgba(255, 255, 255, 0.35),
+							-2.5em 5em 0em rgba(255, 255, 255, 0.40),
+							-1.5em 6em 0em rgba(255, 255, 255, 0.45),
+							-0.5em 7em 0em rgba(255, 255, 255, 0.50),
+
+							-10em 0em 0em rgba(255, 255, 255, 0.20),
+							-11em -1em 0em rgba(255, 255, 255, 0.25),
+							-12em -2em 0em rgba(255, 255, 255, 0.30),
+							-9em 1em 0em rgba(255, 255, 255, 0.20),
+							-8em 2em 0em rgba(255, 255, 255, 0.25),
+							-7em 3em 0em rgba(255, 255, 255, 0.30),
+							-6em 4em 0em rgba(255, 255, 255, 0.35),
+							-5em 5em 0em rgba(255, 255, 255, 0.40),
+							-4em 6em 0em rgba(255, 255, 255, 0.45),
+					}
+				}
+				.circle03{
+					bottom:$size;
+					left:$size * 2.5;
+					background:$col_js;
+					span {
+						text-shadow:
+							-1em -1em 0em rgba(255, 255, 255, 0.10),
+							-2em -2em 0em rgba(255, 255, 255, 0.15),
+							-3em -3em 0em rgba(255, 255, 255, 0.20),
+							-4em -4em 0em rgba(255, 255, 255, 0.25),
+							-5em -5em 0em rgba(255, 255, 255, 0.30),
+							-6em -6em 0em rgba(255, 255, 255, 0.35),
+							1em 1em 0em rgba(255, 255, 255, 0.10),
+							2em 2em 0em rgba(255, 255, 255, 0.15),
+							3em 3em 0em rgba(255, 255, 255, 0.20),
+							4em 4em 0em rgba(255, 255, 255, 0.25),
+							5em 5em 0em rgba(255, 255, 255, 0.30),
+							6em 6em 0em rgba(255, 255, 255, 0.35),
+
+							5.3em 0em 0em rgba(255, 255, 255, 0.10),
+							4.3em -1em 0em rgba(255, 255, 255, 0.10),
+							3.3em -2em 0em rgba(255, 255, 255, 0.15),
+							2.3em -3em 0em rgba(255, 255, 255, 0.20),
+							1.3em -4em 0em rgba(255, 255, 255, 0.25),
+							0.3em -5em 0em rgba(255, 255, 255, 0.30),
+							-1.3em -6em 0em rgba(255, 255, 255, 0.35),
+							-2.3em -7em 0em rgba(255, 255, 255, 0.40),
+							6.3em 1em 0em rgba(255, 255, 255, 0.10),
+							7.3em 2em 0em rgba(255, 255, 255, 0.15),
+							8.3em 3em 0em rgba(255, 255, 255, 0.20),
+							9.3em 4em 0em rgba(255, 255, 255, 0.25),
+							10.3em 5em 0em rgba(255, 255, 255, 0.30),
+
+							10.6em 0em 0em rgba(255, 255, 255, 0.15),
+							9.6em -1em 0em rgba(255, 255, 255, 0.15),
+							8.6em -2em 0em rgba(255, 255, 255, 0.20),
+							7.6em -3em 0em rgba(255, 255, 255, 0.25),
+							6.6em -4em 0em rgba(255, 255, 255, 0.30),
+							5.6em -5em 0em rgba(255, 255, 255, 0.35),
+							4.6em -6em 0em rgba(255, 255, 255, 0.40),
+							3.6em -7em 0em rgba(255, 255, 255, 0.45),
+							2.6em -8em 0em rgba(255, 255, 255, 0.50),
+							11.6em 1em 0em rgba(255, 255, 255, 0.10),
+							12.6em 2em 0em rgba(255, 255, 255, 0.15),
+							13.6em 3em 0em rgba(255, 255, 255, 0.20),
+							14.6em 4em 0em rgba(255, 255, 255, 0.25),
+
+							15.9em 0em 0em rgba(255, 255, 255, 0.20),
+							14.9em -1em 0em rgba(255, 255, 255, 0.20),
+							13.9em -2em 0em rgba(255, 255, 255, 0.25),
+							12.9em -3em 0em rgba(255, 255, 255, 0.30),
+							11.9em -4em 0em rgba(255, 255, 255, 0.35),
+							10.9em -5em 0em rgba(255, 255, 255, 0.40),
+							9.9em -6em 0em rgba(255, 255, 255, 0.45),
+							8.9em -7em 0em rgba(255, 255, 255, 0.50),
+							16.9em 1em 0em rgba(255, 255, 255, 0.25),
+							17.9em 2em 0em rgba(255, 255, 255, 0.30),
+							18.9em 3em 0em rgba(255, 255, 255, 0.35),
+
+							-5.3em 0em 0em rgba(255, 255, 255, 0.10),
+							-6.3em -1em 0em rgba(255, 255, 255, 0.15),
+							-7.3em -2em 0em rgba(255, 255, 255, 0.20),
+							-8.3em -3em 0em rgba(255, 255, 255, 0.25),
+							-9.3em -4em 0em rgba(255, 255, 255, 0.30),
+							-10.3em -5em 0em rgba(255, 255, 255, 0.35),
+							-4.3em 1em 0em rgba(255, 255, 255, 0.10),
+							-3.3em 2em 0em rgba(255, 255, 255, 0.15),
+							-2.3em 3em 0em rgba(255, 255, 255, 0.20),
+							-1.3em 4em 0em rgba(255, 255, 255, 0.25),
+							-0.3em 5em 0em rgba(255, 255, 255, 0.30),
+							0.3em 6em 0em rgba(255, 255, 255, 0.35),
+							1.3em 7em 0em rgba(255, 255, 255, 0.40),
+
+							-10.6em 0em 0em rgba(255, 255, 255, 0.10),
+							-11.6em -1em 0em rgba(255, 255, 255, 0.15),
+							-12.6em -2em 0em rgba(255, 255, 255, 0.20),
+							-13.6em -3em 0em rgba(255, 255, 255, 0.25),
+							-14.6em -4em 0em rgba(255, 255, 255, 0.30),
+							-9.6em 1em 0em rgba(255, 255, 255, 0.10),
+							-8.6em 2em 0em rgba(255, 255, 255, 0.15),
+							-7.6em 3em 0em rgba(255, 255, 255, 0.20),
+							-6.6em 4em 0em rgba(255, 255, 255, 0.25),
+							-5.6em 5em 0em rgba(255, 255, 255, 0.30),
+							-4.6em 6em 0em rgba(255, 255, 255, 0.35),
+							-3.6em 7em 0em rgba(255, 255, 255, 0.40),
+							-2.6em 8em 0em rgba(255, 255, 255, 0.40),
+
+							-15.9em 0em 0em rgba(255, 255, 255, 0.20),
+							-16.9em -1em 0em rgba(255, 255, 255, 0.25),
+							-17.9em -2em 0em rgba(255, 255, 255, 0.30),
+							-18.9em -3em 0em rgba(255, 255, 255, 0.35),
+							-14.9em 1em 0em rgba(255, 255, 255, 0.20),
+							-13.9em 2em 0em rgba(255, 255, 255, 0.25),
+							-12.9em 3em 0em rgba(255, 255, 255, 0.30),
+							-11.9em 4em 0em rgba(255, 255, 255, 0.35),
+							-10.9em 5em 0em rgba(255, 255, 255, 0.40),
+							-9.9em 6em 0em rgba(255, 255, 255, 0.45),
+							-8.9em 7em 0em rgba(255, 255, 255, 0.50);
+					}
+				}
+				.circle04{
+					bottom:$size;
+					right:$size * 2.5;
+					background:$col_jq;
+					span {
+						text-shadow:
+							-1em -1em 0em rgba(255, 255, 255, 0.10),
+							-2em -2em 0em rgba(255, 255, 255, 0.15),
+							-3em -3em 0em rgba(255, 255, 255, 0.20),
+							-4em -4em 0em rgba(255, 255, 255, 0.25),
+							-5em -5em 0em rgba(255, 255, 255, 0.30),
+							-6em -6em 0em rgba(255, 255, 255, 0.35),
+							1em 1em 0em rgba(255, 255, 255, 0.10),
+							2em 2em 0em rgba(255, 255, 255, 0.15),
+							3em 3em 0em rgba(255, 255, 255, 0.20),
+							4em 4em 0em rgba(255, 255, 255, 0.25),
+							5em 5em 0em rgba(255, 255, 255, 0.30),
+							6em 6em 0em rgba(255, 255, 255, 0.35),
+
+							3.5em 0em 0em rgba(255, 255, 255, 0.10),
+							2.5em -1em 0em rgba(255, 255, 255, 0.10),
+							1.5em -2em 0em rgba(255, 255, 255, 0.15),
+							0.5em -3em 0em rgba(255, 255, 255, 0.20),
+							-0.5em -4em 0em rgba(255, 255, 255, 0.25),
+							-1.5em -5em 0em rgba(255, 255, 255, 0.30),
+							-2.5em -6em 0em rgba(255, 255, 255, 0.35),
+							-3.5em -7em 0em rgba(255, 255, 255, 0.40),
+							4.5em 1em 0em rgba(255, 255, 255, 0.10),
+							5.5em 2em 0em rgba(255, 255, 255, 0.15),
+							6.5em 3em 0em rgba(255, 255, 255, 0.20),
+							7.5em 4em 0em rgba(255, 255, 255, 0.25),
+							8.5em 5em 0em rgba(255, 255, 255, 0.30),
+
+							7em 0em 0em rgba(255, 255, 255, 0.15),
+							6em -1em 0em rgba(255, 255, 255, 0.15),
+							5em -2em 0em rgba(255, 255, 255, 0.20),
+							4em -3em 0em rgba(255, 255, 255, 0.25),
+							3em -4em 0em rgba(255, 255, 255, 0.30),
+							2em -5em 0em rgba(255, 255, 255, 0.35),
+							1em -6em 0em rgba(255, 255, 255, 0.40),
+							0em -7em 0em rgba(255, 255, 255, 0.45),
+							-1em -8em 0em rgba(255, 255, 255, 0.50),
+							8em 1em 0em rgba(255, 255, 255, 0.10),
+							9em 2em 0em rgba(255, 255, 255, 0.15),
+							10em 3em 0em rgba(255, 255, 255, 0.20),
+							11em 4em 0em rgba(255, 255, 255, 0.25),
+
+							10.5em 0em 0em rgba(255, 255, 255, 0.20),
+							9.5em -1em 0em rgba(255, 255, 255, 0.20),
+							8.5em -2em 0em rgba(255, 255, 255, 0.25),
+							7.5em -3em 0em rgba(255, 255, 255, 0.30),
+							6.5em -4em 0em rgba(255, 255, 255, 0.35),
+							5.5em -5em 0em rgba(255, 255, 255, 0.40),
+							4.5em -6em 0em rgba(255, 255, 255, 0.45),
+							3.5em -7em 0em rgba(255, 255, 255, 0.50),
+							11.5em 1em 0em rgba(255, 255, 255, 0.25),
+							12.5em 2em 0em rgba(255, 255, 255, 0.30),
+							13.5em 3em 0em rgba(255, 255, 255, 0.35),
+
+							-3.5em 0em 0em rgba(255, 255, 255, 0.10),
+							-4.5em -1em 0em rgba(255, 255, 255, 0.15),
+							-5.5em -2em 0em rgba(255, 255, 255, 0.20),
+							-6.5em -3em 0em rgba(255, 255, 255, 0.25),
+							-7.5em -4em 0em rgba(255, 255, 255, 0.30),
+							-8.5em -5em 0em rgba(255, 255, 255, 0.35),
+							-2.5em 1em 0em rgba(255, 255, 255, 0.10),
+							-1.5em 2em 0em rgba(255, 255, 255, 0.15),
+							-0.5em 3em 0em rgba(255, 255, 255, 0.20),
+							0.5em 4em 0em rgba(255, 255, 255, 0.25),
+							1.5em 5em 0em rgba(255, 255, 255, 0.30),
+							2.5em 6em 0em rgba(255, 255, 255, 0.35),
+							3.5em 7em 0em rgba(255, 255, 255, 0.40),
+
+							-7em 0em 0em rgba(255, 255, 255, 0.15),
+							-8em -1em 0em rgba(255, 255, 255, 0.20),
+							-9em -2em 0em rgba(255, 255, 255, 0.25),
+							-10em -3em 0em rgba(255, 255, 255, 0.30),
+							-11em -4em 0em rgba(255, 255, 255, 0.35),
+							-6em 1em 0em rgba(255, 255, 255, 0.15),
+							-5em 2em 0em rgba(255, 255, 255, 0.20),
+							-4em 3em 0em rgba(255, 255, 255, 0.25),
+							-3em 4em 0em rgba(255, 255, 255, 0.30),
+							-2em 5em 0em rgba(255, 255, 255, 0.35),
+							-1em 6em 0em rgba(255, 255, 255, 0.40),
+							0em 7em 0em rgba(255, 255, 255, 0.45),
+							1em 8em 0em rgba(255, 255, 255, 0.50),
+
+							-10.5em 0em 0em rgba(255, 255, 255, 0.20),
+							-11.5em -1em 0em rgba(255, 255, 255, 0.25),
+							-12.5em -2em 0em rgba(255, 255, 255, 0.30),
+							-13.5em -3em 0em rgba(255, 255, 255, 0.35),
+							-9.5em 1em 0em rgba(255, 255, 255, 0.20),
+							-8.5em 2em 0em rgba(255, 255, 255, 0.25),
+							-7.5em 3em 0em rgba(255, 255, 255, 0.30),
+							-6.5em 4em 0em rgba(255, 255, 255, 0.35),
+							-5.5em 5em 0em rgba(255, 255, 255, 0.40),
+							-4.5em 6em 0em rgba(255, 255, 255, 0.45),
+							-3.5em 7em 0em rgba(255, 255, 255, 0.50);
+					}
+				}
+				&+.btn_main_ment {
+					.sec_ment {
+						.flip {
+							div {
+								&.box01 {
+									animation:secMent 12s linear 0s infinite;
+									span {
+										background:$col_ht;
+									}
+								}
+								&.box02 {
+									animation:secMent 12s linear 2s infinite;
+									span {
+										background:$col_cs;
+									}
+								}
+								&.box03 {
+									animation:secMent 12s linear 4s infinite;
+									span {
+										background:$col_js;
+									}
+								}
+								&.box04 {
+									animation:secMent 12s linear 6s infinite;
+									span {
+										background:$col_jq;
+									}
+								}
+								&.box05 {
+									animation:secMentAny 12s linear 8s infinite;
+									span {
+										background-color:$col_wh;
+										color:$col_bk;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.btn_main_ment{
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			border-radius:100%;
+			text-align:center;
+			color: $col_wh;
+			transition:transform 0.2s;
+			.fir_ment{
+				display:none;
+				.txt_mask {
+					display:block;
+					position:relative;
+					overflow:hidden;
+					.txt {
+						display:block;
+						line-height: 1.5;
+						font-size:3.2em;
+						font-weight:600;
+						-webkit-text-stroke-color: $col_wh;
+						-webkit-text-stroke-width: 0.02em;
+						-webkit-text-fill-color: transparent;
+						background-clip: text;
+						background-image:linear-gradient(0deg, #fff 0%, #fff 50%, transparent 50.1%);
+						background-position:100% 100%;
+						background-repeat: no-repeat;
+						background-size:100% 0%;
+						transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+						text-transform:uppercase;
+						&.on {
+							background-size:100% 200%;
+						}
+					}
+				}
+			}
+			.sec_ment {
+				display:none;
+				font-size:4.4em;
+				font-weight:600;
+				transition:transform 0.2s;
+				.flip {
+					display:block;
+					overflow:hidden;
+					position:relative;
+					margin:10px 0;
+					height:80px;
+					text-align:center;
+					> div {
+						display:block;
+						position:absolute;
+						top:-90px;
+						left:50%;
+						line-height:50px;
+						transform:translateX(-50%);
+						&.box01 {
+							animation:secMent 12s linear 0s infinite;
+							span {
+								background:$col_ht;
+							}
+						}
+						&.box02 {
+							animation:secMent 12s linear 2s infinite;
+							span {
+								background:$col_cs;
+							}
+						}
+						&.box03 {
+							animation:secMent 12s linear 4s infinite;
+							span {
+								background:$col_js;
+							}
+						}
+						&.box04 {
+							animation:secMent 12s linear 6s infinite;
+							span {
+								background:$col_jq;
+							}
+						}
+						&.box05 {
+							animation:secMentAny 12s linear 8s infinite;
+							span {
+								background-color:$col_wh;
+								color:$col_bk;
+							}
+						}
+						span {
+							display:inline-block;
+							font-size:4.4em;
+							font-weight:600;
+							padding:1px 15px 9px;
+						}
+					}
+				}
+			}
+			&:before,
+			&:after {
+				content:'';
+				position:absolute;
+				top:50%;
+				left:50%;
+				width:0;
+				height:0;
+				border-radius:100%;
+				box-shadow:inset 0px 0px 30px 30px rgba(200, 200, 200, 0.3);
+				transform:translate(-50%, -50%);
+			}
+			&.active {
+				$time : 0.5s;
+				&:before {
+					animation: mentClick $time * 3 linear infinite;
+				}
+				&:after {
+					animation: mentClick $time * 3 linear $time infinite;
+				}
+			}
+		}
+		&:hover {
+			.sec_ment{
+				transform:scale(1.2);
+			}
+		}
+	}
+	.sec04 {
+		position:relative;
+		min-height:none;
+		padding:100px 0;
+		background-color:$col_bk;
+		z-index:1;
+	}
+}	
+

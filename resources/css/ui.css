@@ -1,0 +1,25 @@
+.content section { min-height: 100vh; }
+
+.content .sec01 { position: relative; }
+
+.content .sec01 .visual_wrap { display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; }
+
+.content .sec01 .visual_wrap > div { width: 50%; }
+
+.content .sec01 .visual_wrap .visual01 { background-color: #bbb; }
+
+.content .sec01 .visual_wrap .visual02 { background-color: #ffbbbb; }
+
+.content .animate_wrap { position: fixed; top: 50%; left: 50%; width: 400px; height: 400px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.content .animate_wrap .circle_box { font-size: 0; }
+
+.content .animate_wrap .circle_box > div { display: inline-block; width: 200px; height: 200px; -webkit-transition: all 0.2s; transition: all 0.2s; }
+
+.content .animate_wrap .circle_box .circle01 { border-radius: 100% 0 0 0; background-color: #f26a2d; }
+
+.content .animate_wrap .circle_box .circle02 { border-radius: 0 100% 0 0; background-color: #32aadb; }
+
+.content .animate_wrap .circle_box .circle03 { border-radius: 0 0 0 100%; background-color: #f1c023; }
+
+.content .animate_wrap .circle_box .circle04 { border-radius: 0 0 100% 0; background-color: #0d66a5; }
