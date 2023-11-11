@@ -604,7 +604,10 @@ body {
 /* ========== // Keyframes ========== */
 
 /* ========== Mo ========== */
-.mo .mask_box .mask_top {height:var(--padMo);}
+.mo .header {top:calc(var(--pad));left:calc(var(--pad));}
+.mo .bg_wrap {top:var(--padMo);}
+.mo .bg_wrap:before {top:var(--padMo);}
+.mo .mask_box .mask_top {height:var(--padMo);background:linear-gradient(180deg, rgb(237,237,237,1) 0%, rgb(237,237,237,1) 50%, rgba(230,230,230,0.7) 100%);}
 .mo .frame_wrap {top:var(--padMo);}
 .mo .frame_wrap .line_box {top:calc(var(--padMo) - 1px);}
 .mo .frame_wrap .line_box .frame_line.line_top {top:var(--padMo);}
