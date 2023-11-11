@@ -609,7 +609,7 @@ body {
 .mo .header nav ul {flex-direction:row;justify-content:space-between;width:100%;row-gap:normal;}
 .mo .bg_wrap {top:var(--padMo);}
 .mo .bg_wrap:before {top:var(--padMo);}
-.mo .mask_box .mask_top {height:var(--padMo);background:var(--top-gradient);}
+.mo .mask_box .mask_top {height:var(--padMo);background:var(--top-gradient);-webkit-transition:background .3s linear;transition:background .3s linear;}
 .mo .frame_wrap {top:var(--padMo);}
 .mo .frame_wrap .line_box {top:calc(var(--padMo) - 1px);}
 .mo .frame_wrap .line_box .frame_line.line_top {top:var(--padMo);}
