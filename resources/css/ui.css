@@ -85,6 +85,7 @@ a:focus {
 	--pad : max(50px, 6vmin);
 	--padMo : max(150px, 12vmin);
 	--bg-gradient : linear-gradient(235deg, #fffcdc, #eeeeee, #e3f2ff, #ffe3e3, #e3ffe3);
+	--top-gradient : linear-gradient(180deg, rgb(237,237,237,1) 0%, rgb(237,237,237,1) 50%, rgba(230,230,230,0.7) 100%);
 	--c999 : #999999;
 	--c666 : #666666;
 	--c333 : #333333;
@@ -464,7 +465,7 @@ body {
 	display:flex;
 	flex-direction:column;
 	row-gap:.5vmin;
-	flex-basis:60%;
+	flex-basis: 70%;
 	padding-left:20px;
 	text-align:left;
 	color:var(--c666);
@@ -604,11 +605,26 @@ body {
 /* ========== // Keyframes ========== */
 
 /* ========== Mo ========== */
-.mo .header {top:calc(var(--pad));left:calc(var(--pad));}
+.mo .header {top:calc(var(--pad));left:calc(var(--pad));right:calc(var(--pad));}
+.mo .header nav ul {flex-direction:row;justify-content:space-between;width:100%;row-gap:normal;}
 .mo .bg_wrap {top:var(--padMo);}
 .mo .bg_wrap:before {top:var(--padMo);}
-.mo .mask_box .mask_top {height:var(--padMo);background:linear-gradient(180deg, rgb(237,237,237,1) 0%, rgb(237,237,237,1) 50%, rgba(230,230,230,0.7) 100%);}
+.mo .mask_box .mask_top {height:var(--padMo);background: linear-gradient(180deg, rgb(76 76 76) 0%, rgb(76 76 76) 50%, rgba(0,0,0,0.7) 100%);}
 .mo .frame_wrap {top:var(--padMo);}
 .mo .frame_wrap .line_box {top:calc(var(--padMo) - 1px);}
 .mo .frame_wrap .line_box .frame_line.line_top {top:var(--padMo);}
+.mo .sec_wrap .home {right:calc(var(--pad) + 15px);left: calc(var(--pad) + 15px);bottom: calc(var(--pad) + 15px);}
+.mo .sec_wrap .home .sec_item .home_desc,
+.mo .sec_wrap .home .sec_item .home_desc strong {font-size:.933em;}
+.mo .sec_wrap .info {padding: calc(var(--pad) + 150px) calc(var(--pad) + 15px) calc(var(--pad) + 15px);}
+.mo .sec_wrap .info .idpicture {position:relative;left: initial;bottom: initial;text-align:center;}
+.mo .sec_wrap .info .idpicture img {width:100px;}
+.mo .sec_wrap .info .intro_wrap {width:100%;margin-top:30px;}
+.mo .sec_wrap .info .intro_wrap .intro_item .title {font-size:1em;}
+.mo .sec_wrap .info .intro_wrap .intro_item dl > * {font-size: .933em;}
+.mo .sec_wrap .info .intro_wrap .intro_item dt {flex-basis:100%;padding-bottom:0;border-bottom:none;text-align:left;}
+.mo .sec_wrap .info .intro_wrap .intro_item dd {flex-basis:100%;padding-bottom:0;border-bottom:none;}
+.mo .sec_wrap .info .intro_wrap .intro_item dd span {font-size:1em;}
+.mo .sec_wrap .info .intro_wrap .intro_item dd span strong {font-size:1em;}
+.mo .sec_wrap .projects {padding: calc(var(--pad) + 150px) calc(var(--pad) + 15px) calc(var(--pad) + 15px);}
 /* ========== // Mo ========== */
