@@ -83,6 +83,7 @@ a:focus {
 	--w100 : 100%;
 	--basic-bg : rgba(230, 230, 230, .7);
 	--pad : max(50px, 6vmin);
+	--padMo : max(150px, 12vmin);
 	--bg-gradient : linear-gradient(235deg, #fffcdc, #eeeeee, #e3f2ff, #ffe3e3, #e3ffe3);
 	--c999 : #999999;
 	--c666 : #666666;
@@ -601,3 +602,10 @@ body {
 	to {background-size: 200% 200%;}
 }
 /* ========== // Keyframes ========== */
+
+/* ========== Mo ========== */
+.mo .mask_box .mask_top {height:var(--padMo);}
+.mo .frame_wrap {top:var(--padMo);}
+.mo .frame_wrap .line_box {top:calc(var(--padMo) - 1px);}
+.mo .frame_wrap .line_box .frame_line.line_top {top:var(--padMo);}
+/* ========== // Mo ========== */
