@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data>
 	<project>
+		<name>삼성증권 채널 Front-End 운영</name>
+		<pcurl>https://samsungpop.com/</pcurl>
+		<mourl>https://play.google.com/store/apps/details?id=com.samsungpop.android.mpop&pcampaignid=web_share</mourl>
+		<date>2023.07 ~</date>
+		<skill>HTML, CSS, Javascript, Vue, Vuetify, HighChart</skill>
+	</project>
+	<project>
+		<name>현대 ourglovis 내부 커뮤니티 구축</name>
+		<pcurl>null</pcurl>
+		<mourl>null</mourl>
+		<date>2023.04 ~ 2023.07</date>
+		<skill>HTML, CSS, Javascript, Vue, Vuetify, Nuxt</skill>
+	</project>
+	<project>
 		<name>롯데백화점 IT APP 운영</name>
 		<pcurl>https://www.lotteshopping.com/main/main</pcurl>
 		<mourl>https://m.lotteshopping.com/main?cstr=0001</mourl>
