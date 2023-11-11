@@ -3,14 +3,14 @@
 	<project>
 		<name>삼성증권 채널 Front-End 운영</name>
 		<pcurl>https://samsungpop.com/</pcurl>
-		<mourl>https://play.google.com/store/apps/details?id=com.samsungpop.android.mpop&pcampaignid=web_share</mourl>
+		<mourl>https://play.google.com/store/apps/details?id=com.samsungpop.android.mpop&amp;pcampaignid=web_share</mourl>
 		<date>2023.07 ~</date>
 		<skill>HTML, CSS, Javascript, Vue, Vuetify, HighChart</skill>
 	</project>
 	<project>
 		<name>현대 ourglovis 내부 커뮤니티 구축</name>
 		<pcurl>https://www.lotteshopping.com/main/main</pcurl>
-		<mourl>.</mourl>
+		<mourl>null</mourl>
 		<date>2023.04 ~ 2023.07</date>
 		<skill>HTML, CSS, Javascript, Vue, Vuetify, Nuxt</skill>
 	</project>
@@ -24,7 +24,7 @@
 	<project>
 		<name>S1 홈페이지 리뉴얼 구축</name>
 		<pcurl>https://www.s1.co.kr/</pcurl>
-		<mourl>.</mourl>
+		<mourl>null</mourl>
 		<date>2021.02 ~ 2021.03</date>
 		<skill>HTML, CSS, jQuery, Javascript, AOS scroll library, Slick slider</skill>
 	</project>
@@ -38,14 +38,14 @@
 	<project>
 		<name>남동발전 영흥 에너지파크 리뉴얼</name>
 		<pcurl>https://www.koenergy.kr/kosep/ep/main.do</pcurl>
-		<mourl>.</mourl>
+		<mourl>null</mourl>
 		<date>2020.05 ~ 2020.06</date>
 		<skill>HTML, CSS, jQuery, bx slider, 반응형</skill>
 	</project>
 	<project>
 		<name>남동발전 신규 REC시스템 구축</name>
 		<pcurl>https://rec.koenergy.kr/</pcurl>
-		<mourl>.</mourl>
+		<mourl>null</mourl>
 		<date>2020.04 ~ 2020.05</date>
 		<skill>HTML, CSS, jQuery</skill>
 	</project>
@@ -73,7 +73,7 @@
 	<project>
 		<name>NH농협카드 PC홈페이지 접근성 프로젝트</name>
 		<pcurl>https://card.nonghyup.com/IpCc0001M.act</pcurl>
-		<mourl>.</mourl>
+		<mourl>null</mourl>
 		<date>2018.10 ~ 2019.01</date>
 		<skill>총괄 접근성 검수 및 가이드</skill>
 	</project>
@@ -87,28 +87,28 @@
 	<project>
 		<name>한국남동발전 U`Sol 신재생에너지 구축</name>
 		<pcurl>http://www.usolar.co.kr/main.do</pcurl>
-		<mourl>.</mourl>
+		<mourl>null</mourl>
 		<date>2017.08 ~ 2017.09</date>
 		<skill>HTML, CSS, jQuery, Javascript, Kakaomap api, 반응형</skill>
 	</project>
 	<project>
 		<name>삼성서울병원 암병원 UI개선 부분리뉴얼</name>
 		<pcurl>http://www.samsunghospital.com/home/cancer/main/index.do</pcurl>
-		<mourl>.</mourl>
+		<mourl>null</mourl>
 		<date>2017.06 ~ 2017.08</date>
 		<skill>HTML, CSS, jQuery, Javascript, Swiper Slider</skill>
 	</project>
 	<project>
 		<name>삼성증권 해외펀드 정보시스템 리뉴얼</name>
-		<pcurl>.</pcurl>
-		<mourl>.</mourl>
+		<pcurl>null</pcurl>
+		<mourl>null</mourl>
 		<date>2017.03 ~ 2017.04</date>
 		<skill>HTML, CSS, jQuery, Javascript, Google Chart</skill>
 	</project>
 	<project>
 		<name>중부발전 외부홈페이지 통합개편</name>
 		<pcurl>https://www.komipo.co.kr/kor/main/main.do</pcurl>
-		<mourl>.</mourl>
+		<mourl>null</mourl>
 		<date>2017.01 ~ 2017.03</date>
 		<skill>HTML, CSS, jQuery, Javascript, Slick Slider, 반응형</skill>
 	</project>
@@ -121,8 +121,8 @@
 	</project>
 	<project>
 		<name>쇼핑몰 호스팅서비스를 이용한 쇼핑몰 구축 및 유지운영</name>
-		<pcurl>.</pcurl>
-		<mourl>.</mourl>
+		<pcurl>null</pcurl>
+		<mourl>null</mourl>
 		<date>2014.10 ~ 2015.12</date>
 		<skill>HTML, CSS, jQuery, Javascript, Swiper Slider, SessionStorage</skill>
 	</project>
